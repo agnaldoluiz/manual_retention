@@ -8,6 +8,9 @@ repos:
     rev: 6.1.0 # Use the latest stable version of Flake8
     hooks:
       - id: flake8
+        additional_dependencies:
+          - flake8-docstrings
+        args: ["--ignore=E501,D100,D103,W503"] # Ignore E501 errors for pre-commit hook
 
   - repo: https://github.com/pre-commit/mirrors-isort
     rev: v5.9.3 # Use the latest stable version of isort
